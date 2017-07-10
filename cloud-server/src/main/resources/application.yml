@@ -1,0 +1,24 @@
+server:
+  port: 8761
+  
+#使用basic认证
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+  
+#EurekaService 基本配置
+eureka:
+  datacenter: yozuca
+  environment: test
+  client:
+    #健康检查
+    healthcheck:
+        enabled: true
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+

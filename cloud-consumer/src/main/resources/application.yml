@@ -1,0 +1,29 @@
+server:
+  port: 8888
+  
+#指定应用名称(Application)推荐使用小写,注册中心默认大写
+spring:
+  application:
+    name: consumer
+
+#EurekaClient基本配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+      #defaultZone: http://admin:admin@localhost:8761/eureka,http://admin:admin@localhost:8762/eureka
+#服务实例配置IP访问
+  instance:
+    prefer-ip-address: true
+#服务实例名称配置(应用名称：端口)
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    
+#Feign日志级别
+logging:
+  level: 
+    com.akko.feign.UserClient: DEBUG
+
+#hystrix 超时设置
+#hystrix.command.HystrixCommandKey.execution.isolation.thread.timeoutInMillisecond: 3000
+#hystrix.command.default.execution.timeout.enabled: false 
+feign.hystrix.enabled: true
