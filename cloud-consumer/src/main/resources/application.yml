@@ -10,7 +10,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
       #defaultZone: http://admin:admin@localhost:8761/eureka,http://admin:admin@localhost:8762/eureka
 #服务实例配置IP访问
   instance:

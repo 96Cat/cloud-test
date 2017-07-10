@@ -12,6 +12,8 @@
 		<module>cloud-server</module>
 		<module>cloud-provider</module>
 		<module>cloud-consumer</module>
+		<module>cloud-dashboard</module>
+		<module>cloud-bean</module>
 	</modules>
 
 	<parent>

@@ -2,12 +2,12 @@ server:
   port: 8761
   
 #使用basic认证
-security:
-  basic:
-    enabled: true
-  user:
-    name: admin
-    password: admin
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: admin
+#    password: admin
   
 #EurekaService 基本配置
 eureka:
