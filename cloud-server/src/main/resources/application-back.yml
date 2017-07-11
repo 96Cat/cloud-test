@@ -1,4 +1,3 @@
-#使用basic认证
 security:
   basic:
     enabled: true
@@ -14,7 +13,6 @@ server:
 #EurekaService 基本配置
 eureka:
   client:
-    #健康检查
     healthcheck:
         enabled: true
     register-with-eureka: false
@@ -30,7 +28,6 @@ server:
 #EurekaService 基本配置
 eureka:
   client:
-    #健康检查
     healthcheck:
         enabled: true
     register-with-eureka: false

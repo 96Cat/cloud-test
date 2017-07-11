@@ -1,7 +1,6 @@
 server:
   port: 8761
   
-#使用basic认证
 #security:
 #  basic:
 #    enabled: true

@@ -1,21 +1,20 @@
 server:
-  port: 7777
+  port: 9999
   
-#指定应用名称
 spring:
   application:
-    name: provider
+    name: zuul
 
-#EurekaClient基本配置
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-      #defaultZone: http://admin:admin@localhost:8761/eureka,http://admin:admin@localhost:8762/eureka
   instance:
     prefer-ip-address: true
-#服务实例名称配置(应用名称：端口)
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-    #元数据
-    #metadata-map:
-      #zone: youzuca
+
+zuul:
+ routes:
+   consumers:
+     path: /consumer/**
+     serviceId: consumer
