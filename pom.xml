@@ -13,6 +13,7 @@
 		<module>cloud-provider</module>
 		<module>cloud-consumer</module>
 		<module>cloud-dashboard</module>
+		<module>cloud-turbine</module>
 		<module>cloud-bean</module>
 	</modules>
 

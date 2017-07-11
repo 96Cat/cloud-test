@@ -1,5 +1,6 @@
 server:
   port: 8888
+  #context-path: /consumer
   
 #指定应用名称(Application)推荐使用小写,注册中心默认大写
 spring:
@@ -15,6 +16,7 @@ eureka:
 #服务实例配置IP访问
   instance:
     prefer-ip-address: true
+    #home-page-url-path: /consumer
 #服务实例名称配置(应用名称：端口)
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
     
